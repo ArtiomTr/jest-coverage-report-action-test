@@ -15,4 +15,4 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   working_directory: project
                   threshold: 80
-                  icons: unicode
+                  icons: emoji
