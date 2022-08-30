@@ -20,4 +20,4 @@ jobs:
               id: coverage
             - uses: marocchino/sticky-pull-request-comment@v2
               with:
-                  message: ${{ steps.coverage.report }}
+                  message: ${{ steps.coverage.outputs.report }}
