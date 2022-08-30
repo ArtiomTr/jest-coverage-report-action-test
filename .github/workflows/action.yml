@@ -14,12 +14,10 @@ jobs:
               with:
                   node-version: '14'
             - uses: artiomtr/jest-coverage-report-action@Implement-output-for-action
-              id: random-color-generator
+              id: coverage
               with:
                   working-directory: project
                   output: report-markdown
-            - name: Get color
-              run: echo "The selected color is ${{ toJSON(steps.random-color-generator.outputs) }}"
             - uses: marocchino/sticky-pull-request-comment@v2
               with:
                   message: ${{ steps.coverage.outputs.report }}
