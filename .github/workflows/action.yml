@@ -7,8 +7,13 @@ on:
 jobs:
     coverage:
         runs-on: ubuntu-latest
+        permissions:
+            checks: write
+            pull-requests: write
+            contents: read
         steps:
             - uses: actions/checkout@v3
-            - uses: ArtiomTr/jest-coverage-report-action@Test-action
+            - uses: ArtiomTr/jest-coverage-report-action@v2
               with:
                   annotations: none
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
