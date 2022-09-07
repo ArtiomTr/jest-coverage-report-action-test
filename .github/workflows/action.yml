@@ -7,14 +7,12 @@ on:
 jobs:
     coverage:
         runs-on: ubuntu-latest
-        permissions:
-            checks: write
-            pull-requests: write
-            issues: write
-            contents: read
         steps:
             - uses: actions/checkout@v3
             - uses: ArtiomTr/jest-coverage-report-action@v2
+              id: coverage
               with:
-                  annotations: none
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  output: report-markdown
+            - uses: marocchino/sticky-pull-request-comment@v2
+              with:
+                  message: ${{ steps.coverage.outputs.report }}
