@@ -9,6 +9,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - uses: ArtiomTr/jest-coverage-report-action@Test
+            - uses: ArtiomTr/jest-coverage-report-action@Test-action
               with:
                   annotations: none
