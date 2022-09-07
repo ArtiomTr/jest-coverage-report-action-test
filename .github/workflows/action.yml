@@ -9,11 +9,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - uses: ArtiomTr/jest-coverage-report-action@Implement-output-for-action
-              id: coverage
+            - uses: ArtiomTr/jest-coverage-report-action@Test
               with:
-                  output: report-markdown
                   annotations: none
-            - uses: marocchino/sticky-pull-request-comment@v2
-              with:
-                  message: ${{ steps.coverage.outputs.report }}
