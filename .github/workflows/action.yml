@@ -9,4 +9,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - uses: ArtiomTr/jest-coverage-report-action@v2
+            - uses: ArtiomTr/jest-coverage-report-action@Add-support-for-pull_request_target-event
