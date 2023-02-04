@@ -1,7 +1,6 @@
 name: 'coverage'
 on:
     pull_request_target:
-        types: [assigned, opened, synchronize, reopened]
         branches:
             - master
             - main
@@ -11,9 +10,3 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - uses: ArtiomTr/jest-coverage-report-action@Add-support-for-pull_request_target-event
-              id: coverage
-              with:
-                  output: report-markdown
-            - uses: marocchino/sticky-pull-request-comment@v2
-              with:
-                  message: ${{ steps.coverage.outputs.report }}
