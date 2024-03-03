@@ -9,4 +9,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - uses: ArtiomTr/jest-coverage-report-action@Show-nice-error-on-tests-failure
+            - uses: ArtiomTr/jest-coverage-report-action@main
