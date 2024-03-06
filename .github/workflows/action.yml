@@ -10,8 +10,7 @@ jobs:
         permissions:
             contents: "read"
             id-token: "write"
-            checks: "write"
             pull-requests: "write"
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v2.2.6
             - uses: ArtiomTr/jest-coverage-report-action@Do-not-fail-if-no-checks-read-permission
